@@ -1,5 +1,5 @@
 ans = []
-with open("day1\input.txt") as f:
+with open("day1/input.txt") as f:
     input = [num for num in f.read().splitlines()]
 
 calories = 0
@@ -13,3 +13,6 @@ for line in input:
 ans.sort(reverse=True)
 print(ans[0])
 print(ans[0] + ans[1] + ans[2])
+
+# q: how to remove last commit from git history?
+# a: git reset --hard HEAD~1
