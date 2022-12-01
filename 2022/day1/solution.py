@@ -1,10 +1,15 @@
-ans = 0
-ans2 = 0
+ans = []
 with open("day1\input.txt") as f:
-    input = f.read().splitlines()
-    # input = f.read().split("")
-    # input = [int(num) for num in f.read().splitlines()]
-    # input = [[int(num) for num in line] for line in f.read().splitlines()]
+    input = [num for num in f.read().splitlines()]
 
-print(ans)
-print(ans2)
+calories = 0
+for line in input:
+    if len(line) == 0:
+        ans.append(calories)
+        calories = 0
+        continue
+    calories += int(line)
+
+ans.sort(reverse=True)
+print(ans[0])
+print(ans[0] + ans[1] + ans[2])
