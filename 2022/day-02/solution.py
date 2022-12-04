@@ -1,6 +1,6 @@
 ans = 0
 ans2 = 0
-with open("day2/input.txt") as f:
+with open("day-02/input.txt") as f:
     input = [tuple(line.split()) for line in f.read().splitlines()]
 
 # A  = rock, B = paper, C = scissors

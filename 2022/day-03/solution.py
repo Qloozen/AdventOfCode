@@ -1,6 +1,6 @@
 ans = 0
 ans2 = 0
-with open("day3\input.txt") as f:
+with open("day-03/input.txt") as f:
     input = f.read().splitlines()
 
 # part 1

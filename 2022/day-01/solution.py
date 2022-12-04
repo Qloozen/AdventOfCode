@@ -1,5 +1,5 @@
 ans = []
-with open("day1/input.txt") as f:
+with open("day-01/input.txt") as f:
     input = [num for num in f.read().splitlines()]
 
 calories = 0
