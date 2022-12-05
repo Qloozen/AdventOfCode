@@ -9,17 +9,15 @@ with open("day-05/input.txt") as f:
     stack_list = []
     for x in range(1, len(stacks_raw[0]), 4):
         new_stack = []
-        is_stack = False
         for y in range(0, len(stacks_raw)):
             char = stacks_raw[y][x]
             if (char.isalpha()):
                 new_stack.append(char)
-                is_stack = True
-        if is_stack:
-            new_stack.reverse()
-            stack_list.append(new_stack)
+        new_stack.reverse()
+        stack_list.append(new_stack)
     p2_stack_list = copy.deepcopy(stack_list)
 
+# part 1 & part 2
 for instruction in instructions:
     amount, from_stack, to_stack = instruction[0], instruction[1] - 1, instruction[2] - 1
     
