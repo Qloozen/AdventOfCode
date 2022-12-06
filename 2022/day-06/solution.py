@@ -3,7 +3,7 @@ with open("day-06/input.txt") as f:
 
 
 def find_sequence(num):
-    return next(i+num for i in range(len(input)-num-1) if len(set(input[i:i+num])) == num)
+    return next(i+num for i in range(len(input)-num) if len(set(input[i:i+num])) == num)
 
 
 print(find_sequence(4))
