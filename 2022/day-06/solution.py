@@ -2,8 +2,8 @@ with open("day-06/input.txt") as f:
     input = f.read()
 
 
-def find_sequence(num):
-    return next(i+num for i in range(len(input)-num) if len(set(input[i:i+num])) == num)
+def find_sequence(size):
+    return next(i+size for i in range(len(input)-size) if len(set(input[i:i+size])) == size)
 
 
 print(find_sequence(4))
