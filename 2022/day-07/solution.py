@@ -5,7 +5,6 @@ with open("day-07/input.txt") as f:
 
 fs = {}
 currentDir = []
-# /abcd
 for line in input:
     parts = line.split()
     if parts[1] == 'cd':
