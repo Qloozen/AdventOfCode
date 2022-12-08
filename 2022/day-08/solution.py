@@ -14,18 +14,14 @@ def distance(selected, arr) -> int:  # Part 2
     return viewing_distance
 
 
-for y_index, row in enumerate(input):
-    if y_index == 0 or y_index == len(input) - 1:
-        continue
-    for x_index, x in enumerate(row):
-        if x_index == 0 or x_index == len(row) - 1:
-            continue
-        col = [row[x_index] for row in input]
-        left, right, up, down = row[:x_index], row[x_index+1:], col[:y_index], col[y_index+1:]
-        is_visable = max(left) < x or max(
-            right) < x or max(up) < x or max(down) < x
-        ans += is_visable
-        scenic_score = distance(x, reversed(up)) * distance(x, right) * distance(x, down) * distance(x, reversed(left))
+for y in range(1, len(input)-1):
+    row = input[y]
+    for x in range(1, len(input[y])-1):
+        col = [row[x] for row in input]
+        selected = input[y][x]
+        left, right, up, down = row[:x], row[x+1:], col[:y], col[y+1:]
+        ans += max(left) < selected or max(right) < selected or max(up) < selected or max(down) < selected
+        scenic_score = distance(selected, reversed(up)) * distance(selected, right) * distance(selected, down) * distance(selected, reversed(left))
         ans2 = scenic_score if scenic_score > ans2 else ans2
 
 print(ans + len(input[0]) * 2 + (len(input) - 2) * 2)
