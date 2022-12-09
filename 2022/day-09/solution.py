@@ -4,48 +4,66 @@ with open("day-09/input.txt") as f:
     input = [tuple(x.split()) for x in f.read().splitlines()]
     print(input)
 
-head_x = head_y = 0
-tail_x = tail_y = 0
+pos = {'h_x': 0, 'h_y': 0, 't_x': 0, 't_y': 0}
 visited = set()
 
 
-def get_steps(start, stop, step, x, y) -> set:
-    visited = set()
-    for i in range(start, stop, step):
-        visited.add((x if x else i, y if y else i))
-    return visited
+def is_adjacent() -> bool:
+    return abs(pos['h_x'] - pos['t_x']) > 1 or abs(pos['h_y'] - pos['t_y']) > 1
+
+
+def move_left(steps):
+    global pos, visited
+    distance = abs(pos['h_x'] - pos['t_x'])-1
+    visited_coords = [visited.add((x, pos['t_y'])) for x in range(pos['t_x'], steps-1, -1)]
+    visited.update(visited_coords)
+    pos['t_x'] -= distance
+
+
+def move_right(steps):
+    global pos, visited
+    pos['h_x'] += steps
+    distance = abs(pos['h_x'] - pos['t_x'])-1
+    visited_coords = [visited.add((x, pos['t_y'])) for x in range(pos['t_x'], distance)]
+    visited.update(visited_coords)
+    pos['t_x'] += distance
+
+
+def move_up(steps):
+    global pos, visited
+    pos['h_y'] += steps
+    distance = abs(pos['h_y'] - pos['t_y'])-1
+    visited_coords = [visited.add((pos['t_x'], y)) for y in range(pos['t_y'], steps-1)]
+    visited.update(visited_coords)
+    pos['t_y'] += distance
+
+
+def move_down(steps):
+    global pos, visited
+    pos['h_y'] -= steps
+    distance = abs(pos['h_y'] - pos['t_y'])-1
+    visited_coords = [visited.add((pos['t_x'], y)) for y in range(pos['t_y'], steps-1, -1)]
+    visited.update(visited_coords)
+    pos['t_y'] -= distance
 
 
 for command in input:
     direction = input[0]
-    steps = int(input[1]) - 1
+    steps = int(input[1])
     if direction == 'L':
-        visited.update(get_steps(tail_x, tail_x-steps, -1, None, tail_y))
-        head_x -= steps
-        tail_x -= steps-1
-    elif direction == 'R':
-        visited.update(get_steps(tail_x, tail_x+steps, 1, None, tail_y))
-        head_x += steps
-        tail_x += steps-1
-    elif direction == 'U':
-        if head_x == head_x:  # move up
-            visited.update(get_steps(tail_y, tail_y+steps, 1, tail_x, None))
-            head_x += steps
-            tail_x += steps-1
-        elif abs(head_x - tail_x) > 1 or abs(head_y - tail_y) > 1:  # check diagonal up
-            is_head_left = head_x < tail_x
-            if is_head_left:
-                for i in range(tail_y, tail_y+(steps-1), 1):
-                    visited.add((tail_x-1, i))
-                tail_x -= 1
-                tail_y += (head_y - tail_y)-1
-            else:
-                for i in range(tail_y, tail_y+(steps-1), 1):
-                    visited.add((tail_x+1, i))
-                tail_x += 1
-                tail_y += (head_y - tail_y)-1
-    elif direction == 'D':
+        pos['h_x'] -= steps
+        if is_adjacent():
+            continue
+        if pos['h_y'] == pos['t_y']:
+            move_left(steps)
+        else:
+            if abs(pos['h_x'] - pos['h_x']) > 1)
 
+    # elif direction == 'R':
+        # if pos['h_x'] == pos['t_x']
+    # elif direction == 'U':
 
-print(ans)
-print(ans2)
+    # elif direction == 'D':
+
+    # print(ans)
+    # print(ans2)
