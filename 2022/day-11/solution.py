@@ -71,3 +71,6 @@ for i in range(10000): # this one will take a couple of seconds
             monkeys[next_monkey].add_item(worry_level)
 two_most_active = list(sorted([monkey.inspection_count for monkey in monkeys]))[-2:]
 print(two_most_active[0] * two_most_active[1])
+
+# Your puzzle answer was 57838
+# Your puzzle answer was 15050382231
