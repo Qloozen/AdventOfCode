@@ -8,3 +8,5 @@ def find_sequence(size):
 
 print(find_sequence(4))
 print(find_sequence(14))
+# Your puzzle answer was 1198
+# Your puzzle answer was 3120

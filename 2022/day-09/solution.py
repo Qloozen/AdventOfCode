@@ -37,3 +37,5 @@ for command in input:
 
 print(len(visited[1]))
 print(len(visited[8]))
+# Your puzzle answer was 6384
+# Your puzzle answer was 2734

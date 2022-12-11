@@ -34,3 +34,5 @@ for move in input:
 
 print(ans)
 print(ans2)
+# Your puzzle answer was 10310
+# Your puzzle answer was 14859

@@ -26,3 +26,6 @@ for y in range(1, len(input)-1):
 
 print(ans + len(input[0]) * 2 + (len(input) - 2) * 2)
 print(ans2)
+
+# Your puzzle answer was 1829
+# Your puzzle answer was 291840

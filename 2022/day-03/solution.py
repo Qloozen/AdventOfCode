@@ -16,3 +16,5 @@ for x in range(0, len(input), 3):
 
 print(ans)
 print(ans2)
+# Your puzzle answer was 8298
+# Your puzzle answer was 2708

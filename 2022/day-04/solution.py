@@ -12,3 +12,5 @@ for line in input:
 
 print(ans)
 print(ans2)
+# Your puzzle answer was 538
+# Your puzzle answer was 792

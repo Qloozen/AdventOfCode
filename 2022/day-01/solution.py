@@ -13,3 +13,5 @@ for line in input:
 ans.sort(reverse=True)
 print(ans[0])
 print(ans[0] + ans[1] + ans[2])
+# Your puzzle answer was 66186
+# Your puzzle answer was 196804

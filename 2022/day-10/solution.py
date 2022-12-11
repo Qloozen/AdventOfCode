@@ -34,3 +34,6 @@ for command in input:
 ans = sum([strength_list[i] for i in range (19, 220, 40)])
 print(ans)
 print(CTR_display)
+
+# Your puzzle answer was 15220
+# Your puzzle answer was RFZEKBFA

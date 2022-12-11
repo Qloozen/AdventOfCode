@@ -39,3 +39,5 @@ ans2 = min(potential)
 
 print(ans)
 print(ans2)
+# Your puzzle answer was 1845346
+# Your puzzle answer was 3636703

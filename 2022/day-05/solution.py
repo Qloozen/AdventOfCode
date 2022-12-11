@@ -36,3 +36,5 @@ for i in range(len(stack_list)):
 
 print(ans)
 print(ans2)
+# Your puzzle answer was VGBBJCRMN
+# Your puzzle answer was LBBVJBRMH
