@@ -64,7 +64,7 @@ for i in range(20):
         monkey = monkeys[m]       
         # print("Monkey " + str(m))
         for _ in range(len(monkey.items)):
-            next_monkey, worry_level = monkey.inspect(i)
+            next_monkey, worry_level = monkey.inspect()
             monkeys[next_monkey].add_item(worry_level)
     print("After round: " + str(i + 1))
     for m in range(len(monkeys)):
