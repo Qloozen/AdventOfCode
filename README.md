@@ -5,13 +5,8 @@ Advent of Code is a series of small programming puzzles for a variety of skill l
 ## How it Works
 1. Each day during the season, a new puzzle is released at midnight Eastern Time.
 2. Solve the puzzle by writing a program in any language you choose.
-3. Submit your solution by using the website. Your solution will be scored based on how fast it runs and how much memory it uses.
-4. Come back the next day to see how your solution compares to others, and to get a new puzzle.
+3. Submit your solution by using the website. Your solution will be scored based on how fast you submit your puzzle after release.
+4. You can visit the global leaderboard to see how you did compared to others. You can also create or join private leaderboards.
 
-## Rules
-1. You may use any programming language you choose.
-2. You may use any third-party libraries or frameworks you choose.
-3. You may not use other people's solutions to these puzzles (including solutions from previous years).
-4. You may submit your solution as many times as you like, but only your fastest time will be recorded.
 
 
