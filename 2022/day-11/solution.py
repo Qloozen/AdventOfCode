@@ -17,7 +17,7 @@ class Monkey:
         self.false = int(false.split('monkey ')[1])
         self.inspection_count = 0
     def __throw(self, worry_level) -> int:
-        if (worry_level * 10) % self.test == 0:
+        if worry_level % self.test == 0:
             # print('     Current worry level is divisible by '+ str(self.test))
             return self.true
         else:
@@ -26,7 +26,7 @@ class Monkey:
 
         # return self.true if worry_level % self.test == 0 else self.false
 
-    def inspect(self, round):
+    def inspect(self):
         self.inspection_count += 1
         item = self.items.pop(0)
         # print(' Monkey inspects an item with a worry level of ' + str(item))
