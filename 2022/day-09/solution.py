@@ -35,7 +35,7 @@ for command in input:
             next_coords = move(leading_knot, next_knot)
             visited[knot].add(tuple(next_coords))
 
-print(len(visited[1]))
+print(len(visited[0]))
 print(len(visited[8]))
 # Your puzzle answer was 6384
 # Your puzzle answer was 2734
