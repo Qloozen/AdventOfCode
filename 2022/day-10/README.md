@@ -15,6 +15,7 @@ Start by figuring out the signal being sent by the CPU. The CPU has a single reg
 The CPU uses these instructions in a program (your puzzle input) to, somehow, tell the screen what to draw.
 
 --- Part Two ---
+
 It seems like the X register controls the horizontal position of a sprite. Specifically, the sprite is 3 pixels wide, and the X register sets the horizontal position of the middle of that sprite. (In this system, there is no such thing as "vertical position": if the sprite's horizontal position puts its pixels where the CRT is currently drawing, then those pixels will be drawn.)
 
 You count the pixels on the CRT: 40 wide and 6 high. This CRT screen draws the top row of pixels left-to-right, then the row below that, and so on. The left-most pixel in each row is in position 0, and the right-most pixel in each row is in position 39.

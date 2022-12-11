@@ -7,6 +7,7 @@ First, determine whether there is enough tree cover here to keep a tree house hi
 The Elves have already launched a quadcopter to generate a map with the height of each tree (your puzzle input).
 
 --- Part Two ---
+
 Content with the amount of tree cover available, the Elves just need to know the best spot to build their tree house: they would like to be able to see a lot of trees.
 
 To measure the viewing distance from a given tree, look up, down, left, and right from that tree; stop if you reach an edge or at the first tree that is the same height or taller than the tree under consideration. (If a tree is right on the edge, at least one of its viewing distances will be zero.)

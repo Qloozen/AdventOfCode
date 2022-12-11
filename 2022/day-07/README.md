@@ -13,6 +13,7 @@ Perhaps you can delete some files to make space for the update?
 You browse around the filesystem to assess the situation and save the resulting terminal output (your puzzle input).
 
 --- Part Two ---
+
 Now, you're ready to choose a directory to delete.
 
 The total disk space available to the filesystem is 70000000. To run the update, you need unused space of at least 30000000. You need to find a directory you can delete that will free up enough space to run the update.

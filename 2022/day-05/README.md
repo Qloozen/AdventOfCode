@@ -9,6 +9,7 @@ The Elves don't want to interrupt the crane operator during this delicate proced
 They do, however, have a drawing of the starting stacks of crates and the rearrangement procedure (your puzzle input).
 
 --- Part Two ---
+
 As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.
 
 Some mud was covering the writing on the side of the crane, and you quickly wipe it away. The crane isn't a CrateMover 9000 - it's a CrateMover 9001.

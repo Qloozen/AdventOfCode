@@ -13,4 +13,5 @@ The winner of the whole tournament is the player with the highest score. Your to
 Since you can't be sure if the Elf is trying to help you or trick you, you should calculate the score you would get if you were to follow the strategy guide.
 
 --- Part Two ---
+
 The Elf finishes helping with the tent and sneaks back over to you. "Anyway, the second column says how the round needs to end: X means you need to lose, Y means you need to end the round in a draw, and Z means you need to win. Good luck!"
