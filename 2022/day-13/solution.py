@@ -48,3 +48,6 @@ while needs_sorting:
     needs_sorting = not bubble_sort(unordered_list)
 
 print((unordered_list.index(divider_a)+1) * (unordered_list.index(divider_b) + 1))
+
+# Your puzzle answer was 5330
+# Your puzzle answer was 27648
