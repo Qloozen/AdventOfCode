@@ -1,53 +1,66 @@
-ans = 0
-ans2 = 0
+TARGET_Y = 2000000 # part1
+MAX_Y = 4000000 # part2
 with open("day-15/input.txt") as f:
     input = f.read().splitlines()
-    data = []
-    all_beacons = set()
-    all_sensors = set()
-    target_y=2000000
+    objects = []
+    all_objects = set()
     for line in input:
         sx = int(line.split('x=')[1].split(',')[0])
         sy = int(line.split('y=')[1].split(":")[0])
         bx = int(line.split('x=')[2].split(',')[0])
         by = int(line.split('y=')[2].split(":")[0])
-        data.append([(sy, sx), (by, bx)])
-        if by == target_y:
-            all_beacons.add((by, bx))
-        if sy == target_y:
-            all_sensors.add((sy, sx))
+        objects.append([(sy, sx), (by, bx)])
+        all_objects.add((sy, sx))
+        all_objects.add((by, bx))
 
-def find_detected(sensor, beacon, detected):
-    sy, sx = sensor
-    by, bx = beacon
-    dist = abs(sx- bx) + abs(sy- by)
+# goes over all sensor/beacon pairs and find the coverage on the given Y in ranges
+def find_ranges_on_line(target_y,) -> set:
+    ranges = set()
+    for pair in objects:
+        sy, sx = pair[0] 
+        by, bx = pair[1] 
+        dist = abs(sx- bx) + abs(sy- by)
+        top_index, bottom_index  = sy-dist, sy+dist 
 
-    top_index = sy-dist 
-    bottom_index = sy+dist 
+        in_range = target_y >= top_index and target_y <= bottom_index
+        
+        if in_range:
+            from_center = abs(sy-target_y)
+            if from_center == 0:
+                ranges.add((sx-dist, sx+dist))
+            ranges.add((sx-(dist-from_center), sx+(dist-from_center)))
+    return ranges
 
-    in_range = target_y >= top_index and target_y <= bottom_index
+# returns total coverage on a line inclusive all beancons/sensors on the line
+# searches for a gap between ranges and terminates immediately after
+def find_coverage_on_line(target_y):
+    ranges = find_ranges_on_line(target_y)
+    sorted_ranges = list(sorted(ranges, key=lambda x: x[0]))
 
-    if in_range:
-        steps = abs(sy-target_y)
-        if steps == 0:
-            detected.add((sx-dist, sx+dist))
-        a = sx - (dist-steps)
-        b = sx + (dist-steps)
-        detected.add((a, b))
+    prev_highest = sorted_ranges[0][1]
+    zipped_ranges = list(zip(sorted_ranges, sorted_ranges[1:]))
+    for prev, curr in zipped_ranges:
+        if curr[0] > prev_highest:
+            gap_x = prev[1]+1
+            # print(f"gap found at y={target_y}, x={gap_x}")
+            print(gap_x * MAX_Y + target_y)
+            exit(0)
+        elif curr[1] > prev_highest:
+            prev_highest = curr[1]
 
-detected = set()
+    lowest = sorted_ranges[0][0]
+    higest = prev_highest
+    return abs(lowest - higest)+1    
 
-for line in data:
-    sensor, beacon = line[0], line[1]
-    find_detected(sensor, beacon, detected)
+# part 1
+coverage = find_coverage_on_line(TARGET_Y)
+objects_on_line = len(list(filter(lambda obj: obj[0] == TARGET_Y, all_objects)))
+print(coverage - objects_on_line)
 
 
-lowest = min(range[0] for range in detected)
-higest = max(range[1] for range in detected)
-    
-objects = len(all_beacons) + len(all_sensors)
+# part 2 - change start to 0 for brute forcing
+for y_index in range(3186981, MAX_Y):
+    find_coverage_on_line(y_index)
 
-diff = abs(lowest - higest)+1
-ans = diff - objects
-
-print(ans)
+# Your puzzle answer was 5256611
+# Your puzzle answer was 13337919186981
