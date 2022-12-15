@@ -31,9 +31,9 @@ def find_ranges_on_line(target_y,) -> set:
             ranges.add((sx-(dist-from_center), sx+(dist-from_center)))
     return ranges
 
-# returns total coverage on a line inclusive all beancons/sensors on the line
+# returns total coverage on a line including all beancons/sensors on the line
 # searches for a gap between ranges and terminates immediately after
-def find_coverage_on_line(target_y):
+def find_coverage_on_line(target_y) -> int:
     ranges = find_ranges_on_line(target_y)
     sorted_ranges = list(sorted(ranges, key=lambda x: x[0]))
 
