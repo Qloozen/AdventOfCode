@@ -45,3 +45,7 @@ def make_copies(start, amount):
 ```
 
 In the end we count the amount of cards we have (including the copies) and print out the result.
+
+
+**alternative suggestion:**
+Maybe part 2 could be improved by not storing the amount of copies per card, but to directly keep track of the amount of cards we have.
