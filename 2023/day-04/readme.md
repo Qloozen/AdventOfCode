@@ -25,7 +25,7 @@ For part two I extended the tuple of part 1 : `(amount, winning_numbers, numbers
 | ------------------------------- | ----------------------------------------------|
 | Card 1 (amount: 1)              | Card 1 (amount: 1)                            |
 | Card 2 (amount: 2, matching: 2) | Card 2 (amount: 2)                            |
-| Card 3 (amount: 2)              | Card 3 (amount: 2) # +1 copy                  |
+| Card 3 (amount: 2)              | Card 3 (amount: 3) # +1 copy                  |
 |                                 | # second copy falls out of the range of cards |
 
 **Iteration 3:**
