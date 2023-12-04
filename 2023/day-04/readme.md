@@ -13,14 +13,21 @@ We append each score to the answer and print out the result.
 For part two I extended the tuple of part 1 : `(amount, winning_numbers, numbers)`. I initialize each card with an amount of 1 since we start with atleast the original card. So the rules are stating that the amount of matching numbers is the amount of copies you make from the card below the current one.
 
 **Iteration 1:**
-Card 1 (amount: 1, matching: 2) -> Card 1 (amount: 1)
-Card 2 (amount: 1) -> Card 2 (amount: 2) # +1 copy
-Card 3 (amount: 1) -> Card 3 (amount: 2) # +1 copy
+| From                            | To                           |
+| ------------------------------- | ---------------------------- |
+| Card 1 (amount: 1, matching: 2) | Card 1 (amount: 1)           |
+| Card 2 (amount: 1)              | Card 2 (amount: 2) # +1 copy |
+| Card 3 (amount: 1)              | Card 3 (amount: 2) # +1 copy |
+
 
 **Iteration 2:**
-Card 1 (amount: 1) -> Card 1 (amount: 1)
-Card 2 (amount: 2, matching: 2) -> Card 2 (amount: 2)
-Card 3 (amount: 2) -> Card 3 (amount: 3) # +1 copy # second copy falls out of the range of cards
+| From                            | To                                            |
+| ------------------------------- | ----------------------------------------------|
+| Card 1 (amount: 1)              | Card 1 (amount: 1)                            |
+| Card 2 (amount: 2, matching: 2) | Card 2 (amount: 2)                            |
+| Card 3 (amount: 2)              | Card 3 (amount: 2) # +1 copy                  |
+|                                 | # second copy falls out of the range of cards |
+
 **Iteration 3:**
 same as iteration 2, since it is a copy of card 2
 
