@@ -29,10 +29,10 @@ For part two I extended the tuple of part 1 : `(amount, winning_numbers, numbers
 |                                 | # second copy falls out of the range of cards |
 
 **Iteration 3:**
-same as iteration 2, since it is a copy of card 2
+- same as iteration 2, since it is a copy of card 2
 
 **Iteration 4, 5, 6, 7:**
-We have now 4 copies of card 3, so we have 4 iterations, but none will make copies because it is the last card.
+- We have now 4 copies of card 3, so we have 4 iterations, but none will make copies because it is the last card.
 
 So I simply iterate over the current amount of cards (1x for card 1 since we can't make copies of past cards). Then I make copies of all the following cards with this function:
 
