@@ -1,6 +1,7 @@
 ## Part 1
 
 **Short explanation of the context**
+
 Part one was more reading than coding. Basically you start with initial source numbers which are the seed numbers. then these source numbers are going though various sequential mapping layers, where the last one is the location mapping layer. A map has the following structure:
 
 ```
@@ -33,6 +34,7 @@ We now have new numbers that we can map again in de next mapping layer etc..
 From the last "location" mapping layer we take the lowest number.
 
 **Approach part 1:**
+
 I store each map into a list of lists:
 
 ```python
@@ -65,11 +67,12 @@ after each map I update the source numbers with the destination numbers and cont
 source_numbers = destination_numbers
 ```
 
-# Part 2 (Oh no my CPU is melting!)
+# Part 2 (my CPU could not handle this)
 
 The seed numbers we received was a list of number [5, 3, 10, 3], however these numbers are ranges too. Meaning each pair of two number is the start and the length of the range. so [(5, 3), (10, 3)] -> [5, 6, 7, 10, 11, 12]. My first thought was to just add all numbers to the source numbers, but since the numbers in the input are really high, this will not work.
 
 **Approach part 2:**
+
 I decided to work with the ranges instead of individual numbers. So [5, 3, 10, 3] -> [(5, 7), (10, 12)]. To map these ranges I check the parts that overlap with the mapping ranges, save the overlapping parts as new destination ranges. To handle partially overlapping ranges I store the left over parts as a separate range to the current source numbers, to check if other ranges of the same map overlap with the left over parts. In the end we also store the ranges if they have no match with the mapping ranges.
 
 as we did in part 1 we set the source number to the destination number and continue with the next map.
