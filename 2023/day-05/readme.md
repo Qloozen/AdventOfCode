@@ -69,7 +69,7 @@ source_numbers = destination_numbers
 
 # Part 2 (my CPU could not handle this)
 
-The seed numbers we received was a list of number [5, 3, 10, 3], however these numbers are ranges too. Meaning each pair of two number is the start and the length of the range. so [(5, 3), (10, 3)] -> [5, 6, 7, 10, 11, 12]. My first thought was to just add all numbers to the source numbers, but since the numbers in the input are really high, this will not work.
+The seed numbers we received was a list of numbers [5, 3, 10, 3], however these numbers are ranges too. Meaning each pair of two number is the start and the length of the range. so [(5, 3), (10, 3)] -> [5, 6, 7, 10, 11, 12]. My first thought was to just add all numbers to the source numbers, but since the numbers in the input are really high, this will not work.
 
 **Approach part 2:**
 
