@@ -48,7 +48,7 @@ With my approach in part 1, I just tried to use the same function and see if it 
 
 **Optimization time:**
 
-Although I already had working code, I had the urge to find a better way. So if you actually look at how you actually brute force it you might see something like this for a single game (remember carge time + moving time == total time):
+Although I already had working code, I had the urge to find a better way. So if you looked at how you actually brute force it you might see something like this for a single game (remember carge time + moving time == total time):
 
 <table>
   <tr>
