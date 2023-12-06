@@ -86,7 +86,7 @@ Although I already had working code, I had the urge to find a better way. So if 
   </tr>
 </table>
 
-As you can see in above table, if you know the first combination of charge time and moving time, you can easily calculate the range of winning races. In this case you start winning at a combination (charge: 2, move: 5) = 10 so that means the last combination will be the reverse (charge: 5, move: 2) = 10. Calculate how many numbers are between the this range, including these combinations.
+As you can see in above table, if you know the first combination of charge time and moving time, you can easily calculate the range of winning races. In this case you start winning at a combination (charge: 2, move: 5) = 10 so that means the last combination will be the reverse (charge: 5, move: 2) = 10. Calculate how many numbers are between this range, including these combinations.
 
 Now you basically have the answer at the moment you find the first combination that wins.
 
