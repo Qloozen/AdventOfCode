@@ -77,10 +77,10 @@ Although I already had working code, I had the urge to find a better way. So if 
     <th>Distance:</th>
     <td>0</td>
     <td>6</td>
-    <td><u>10</u></td>
-    <td><u>12</u></td>
-    <td><u>12</u></td>
-    <td><u>10</u></td>
+    <td style="color:green">10</td>
+    <td style="color:green">12</td>
+    <td style="color:green">12</td>
+    <td style="color:green">10</td>
     <td>6</td>
     <td>0</td>
   </tr>
