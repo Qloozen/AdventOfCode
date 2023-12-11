@@ -45,4 +45,8 @@ VALID_DIRECTIONS = {
 
 ## Part 2
 
-Still in progress ughhh
+So after thinking about solutions, I count the amount of crossings from each non-loop item to the left direction. Basically when an item is inside the loop the amount of crossings to the left (or right) is odd. When an item is outside the loop the amount of crossings to the left (or right) is even. This would be easy if every crossing would be with a | but considering corners like FJ and L7, these count only as one. So I only include |, F, 7 as crossing. After that I count all the odd crossings.
+
+NB: S should be converted to a pipe aswell, which I forgot to do.
+
+My solution is quite slow (2-3 min) for part 2, but it works.
