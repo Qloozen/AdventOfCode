@@ -2,7 +2,7 @@
 
 This problem kind of looked like the puzzle of day-10. Firstly I tried calculating the distance between each point on each row, but it was very optimistic to think the loop would not cross multiple times on a row. So I used an algorithmn that some people suggested for day-10 called the Shoelace algorithm. Defined as:
 
-$\displaystyle\frac{1}{2}|\sum^{n-1}_{i=1} x_i y_{i+1} + x_n y_1 - \sum^{n-1}_{i=1} x_{i + 1}y_i - x_1 y_n|$
+$$\frac{1}{2}|\sum^{n-1}_{i=1} x_i y_{i+1} + x_n y_1 - \sum^{n-1}_{i=1} x_{i + 1}y_i - x_1 y_n|$$
 
 Which is done in these steps:
 
