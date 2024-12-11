@@ -5,7 +5,8 @@ with open("input.txt") as f:
     input = defaultdict(int)
     for num in nums: input[num] += 1
 
-    for _ in range(75): # change to 25 for p1
+    for i in range(75): 
+        if i == 25: print(sum(input.values()))
         updates = defaultdict(int)
 
         for k, v in input.items():
@@ -26,3 +27,6 @@ with open("input.txt") as f:
             if input[k] == 0: input.pop(k)
        
     print(sum(input.values()))
+
+# Your puzzle answer was 186203.
+# Your puzzle answer was 221291560078593.
