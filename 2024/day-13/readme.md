@@ -14,6 +14,6 @@
 
 ### Approach
 
-idk.
+Part 1 was never going to work with these large target numbers. I looked up what others have used as methods without looking at the solution directly. I've researched how the Cramers rule worked and implemented it in the code.
 
-I guess there is a easier way to solve this by using math. My solution will never work for the increased target.
+https://www.youtube.com/watch?v=vXqlIOX2itM
