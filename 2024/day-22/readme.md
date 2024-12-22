@@ -24,4 +24,4 @@ I also have a global dictionary that stores these values for all buyers. For eac
 
 Finally I loop over the global dictionary and return the highest price.
 
-**Example works, input not yet...**
+_NB: My assumption was that if a sequence of 4 appear more than once, in the same price list. The higest price of that sequence is used. Not entirely sure why this is not the case. But when I say my answer was too high I tried adding a set of seen sequences, and ignored duplicate sequences_

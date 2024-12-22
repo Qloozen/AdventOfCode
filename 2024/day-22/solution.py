@@ -36,24 +36,21 @@ with open("input.txt") as f:
         changes = [a - b for a, b in zip(ones[1:], ones)]
         assert(len(changes) == 2000)
 
+        seen = set()
         for i in range(len(changes) - 4):
             seq_key = tuple(changes[i:i+4])
-            current_sequences[seq_key] = max(current_sequences[seq_key], ones[i+4])
+            if seq_key not in seen:
+                current_sequences[seq_key] = ones[i+4]
+                seen.add(seq_key)
 
         for k, v in current_sequences.items():
             sequences[k] += v
 
     print(p1)
-
-    highest_value = 0
-    for k, v in sequences.items(): 
-        if v > highest_value:
-            highest_value = v
-            # print(k)
-    print(highest_value)
+    print(max(sequences.values()))
 
     # Your puzzle answer was 13461553007.
-    # 1550 too high
+    # Your puzzle answer was 1499.
 
 
 
